@@ -3,6 +3,45 @@
 const logoPrimaryMono = require("../assets/logo-primary-mono.svg");
 const logoPrimaryColor = require("../assets/logo-primary-color.svg");
 
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faUsers,
+  faBuilding,
+  faGem,
+  faRunning,
+  faPersonBooth,
+  faUsersCog,
+  faUserCheck,
+  faHammer,
+  faCreditCard,
+  faServer,
+  faTerminal
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faReact,
+  faDocker,
+  faGithub,
+  faTwitter
+} from "@fortawesome/fontawesome-free-brands";
+
+library.add(
+  faUsers,
+  faBuilding,
+  faGem,
+  faReact,
+  faDocker,
+  faGithub,
+  faRunning,
+  faPersonBooth,
+  faUsersCog,
+  faCreditCard,
+  faUserCheck,
+  faServer,
+  faTerminal,
+  faTwitter,
+  faHammer
+);
+
 const theme = (
   primary = "primary",
   secondary = "secondary",
@@ -15,8 +54,8 @@ const theme = (
     },
     slideDefaults: {
       transition: ["fade"],
-      bgColor: primary,
-      textColor: "quaternary"
+      bgColor: secondary,
+      textColor: "primary"
     },
     logoSettings: {
       bgImage: logoPrimaryMono,

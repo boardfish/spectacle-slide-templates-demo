@@ -15,19 +15,18 @@ export default () => {
         <Slide
           {...theme.slideDefaults}
           {...theme.logoSettings}
-          bgImage={theme.images.logoPrimaryColor}
           {...this.props}
-          textColor="quaternary"
+          textColor="secondary"
         >
           {React.Children.map(this.props.children, child => {
             switch (child.type.displayName) {
               case "Heading":
                 return React.cloneElement(child, {
-                  textColor: "secondary"
+                  textColor: "primary"
                 });
               case "Text":
                 return React.cloneElement(child, {
-                  textColor: "quaternary"
+                  textColor: "primary"
                 });
               default:
                 return child;
